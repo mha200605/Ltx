@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.md
+models/
+output/
+outputs/
+.cache/

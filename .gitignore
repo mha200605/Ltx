@@ -1,0 +1,14 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+models/
+output/
+outputs/
+.cache/
+*.log
+.DS_Store

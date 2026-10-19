@@ -1,0 +1,54 @@
+{
+  "model_repo": "Lightricks/LTX-2.5",
+  "model_revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+  "revision_resolved_at": "2026-10-18T13:36+05:00",
+  "download_status": "preloaded_and_verified",
+  "downloaded_at": "2026-10-18T13:42:49+05:00",
+  "preloaded_volume_id": "cn6akjzhji",
+  "verified_file_count": 5,
+  "target_workflow": "LTX-2.5 distilled text-to-video, ComfyUI int8/convrot checkpoints",
+  "target_gpu": "NVIDIA RTX 4090-class, 24 GB VRAM; validate exact Runpod Serverless SKU before deployment",
+  "storage_root": "/runpod-volume/ltx25-models",
+  "storage_capacity_gb_recommended": 100,
+  "files": [
+    {
+      "repo_path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "comfyui_path": "models/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "required": true,
+      "notes": "Distilled checkpoint; ComfyUI-specific int8/convrot format."
+    },
+    {
+      "repo_path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "comfyui_path": "models/text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "required": true,
+      "notes": "LTX-specific Gemma 4 encoder; do not substitute the stock Google Gemma model."
+    },
+    {
+      "repo_path": "vae/ltx-2.5-video-vae-conv-bf16.safetensors",
+      "comfyui_path": "models/vae/ltx-2.5-video-vae-conv-bf16.safetensors",
+      "required": true
+    },
+    {
+      "repo_path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "comfyui_path": "models/vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "required": true
+    },
+    {
+      "repo_path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "comfyui_path": "models/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "required": true
+    }
+  ],
+  "omitted_optional_assets": [
+    "text_encoders/gemma4_e2b_it_int8_convrot.safetensors (prompt enhancer only; leave prompt enhancement disabled for the first API version)"
+  ],
+  "initial_generation_limits": {
+    "width": 512,
+    "height": 320,
+    "frames": 49,
+    "frame_rate": 24,
+    "batch_size": 1,
+    "notes": "Conservative static/API defaults only. 24 GB fit and speed remain unverified on an RTX 4090."
+  },
+  "access": "The Hugging Face account accepted the gated-model terms before the successful preload. A read-only token was injected only through a Runpod Secret reference for the one-time download; its value is not stored here. The model commit SHA is pinned in this manifest."
+}
